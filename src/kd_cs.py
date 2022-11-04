@@ -476,9 +476,7 @@ def main():
         val_accs, test_accs = [], []
         for i in range(args.n_runs):
             seed_everything(args.seed + i)
-            # 2022-10-31 maybe self-kd needs multi-runs with different seeds for the same soft-target, test just use model 1
-            val_acc, test_acc = run_kd(args, (g, knn_g), labels, train_idx, val_idx, test_idx, evaluator, 2)
-            # val_acc, test_acc = run_kd(args, (g, knn_g), labels, train_idx, val_idx, test_idx, evaluator, i + 1)
+            val_acc, test_acc = run_kd(args, (g, knn_g), labels, train_idx, val_idx, test_idx, evaluator, i + 1)
             val_accs.append(val_acc)
             test_accs.append(test_acc)
 
