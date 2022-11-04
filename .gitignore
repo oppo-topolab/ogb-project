@@ -1,0 +1,12 @@
+# python cache
+__pycache__
+*/__pycache__
+
+# checkpoints
+*/.ipynb_checkpoints
+.ipynb_checkpoints
+
+# other package
+*.tgz
+.vscode
+*.bak
